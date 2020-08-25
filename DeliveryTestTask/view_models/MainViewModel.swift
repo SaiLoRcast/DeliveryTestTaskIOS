@@ -43,9 +43,9 @@ class MainViewModel: ObservableObject {
     
     private func getData() {
         
-        client.getCurrentUserInfo(at: userId) { [weak self] currentWeather, error in
+        client.getCurrentUserInfo(at: userId) { [weak self] currentUserInfo, error in
             guard let ws = self else { return }
-            if let currentUserInfo = currentWeather {
+            if let currentUserInfo = currentUserInfo {
                 ws.currentUser = currentUserInfo
                 ws.stateCurrenUser = .success
                 print("getData")

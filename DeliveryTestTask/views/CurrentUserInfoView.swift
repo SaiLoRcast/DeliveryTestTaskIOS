@@ -25,8 +25,7 @@ struct CurrentUserInfo: View {
     var userName: String {
         return data.firstName
     }
-    
-    
+        
     var body: some View {
         
         VStack() {
@@ -40,9 +39,6 @@ struct CurrentUserInfo: View {
                         .foregroundColor(Color("button"))
                         .aspectRatio(contentMode: .fit)
                         .padding(8)
-                    //                    .alignmentGuide(HorizontalAlignment.trailing, computeValue: {d in -100})
-                    //                    .frame(width: 28,height: 28,alignment: .trailing)
-                    
                 }
                 
             }
@@ -62,60 +58,72 @@ struct CurrentUserInfo: View {
             Spacer()
                 .frame(height: 26)
             
-            Text("\(data.firstName) \(data.lastName)")
-                .font(.largeTitle)
+            Text("\(data.title). \(data.firstName) \(data.lastName)")
+                .font(.title)
                 .fontWeight(.medium)
             
             Text("+\(data.phone)")
                 .font(.none)
                 .fontWeight(.light)
             
-            //            Spacer()
-            //                   .frame(height: 200)
+            Spacer()
+                .frame(height: 37)
             
-            VStack{
-                
-                Spacer().frame(height: 33)
-                
-                HStack{
+            VStack(alignment: .leading){
+                                
+                HStack(alignment: .center){
                     
                     Image("box_1")
                     .aspectRatio(contentMode: .fit)
-                    .padding(8)
-                    
+                    .padding(.leading, 20)
+                    .padding(.top, 32)
+                
                     Text("Последний адрес достваки")
                         .font(.none)
-                        .fontWeight(.light)
+                        .fontWeight(.regular)
+                        .padding(.top, 32)
+                    
+                    Spacer()
+
                 }
-                
+                .frame(maxWidth: .infinity)
+
                 Text("\(data.location.country), \(data.location.state), \(data.location.city), \(data.location.street)")
                     .font(.none)
                     .fontWeight(.light)
+                    .padding(.leading, 52)
+                    .padding(.trailing, 48)
+                    .padding(.bottom, 32)
             
             }
             .background(Color("last_delivery_background"))
             .cornerRadius(30)
-            .frame(maxWidth: .infinity)
             
+            Spacer()
+            
+            HStack{
+                
+                Spacer()
+                    .frame(width: 16)
+
                 Button(action: {
                     print("!")
-                    
                 }) {
-                    NavigationLink(destination: OrdersList()) {
-
-                    Text("Создать заказ")
-                        .fontWeight(.medium)
-                        .font(.none)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        
-                        .foregroundColor(.white)
-                        .background(Color("button"))
-                        .cornerRadius(20)
+                    NavigationLink(destination: NewOrder()) {
+                        Text("Создать заказ")
+                            .fontWeight(.medium)
+                            .font(.none)
+                            .frame(maxWidth: .infinity)
+                            .padding(21)
+                            .foregroundColor(.white)
+                            .background(Color("button"))
+                            .cornerRadius(20)
+                    }
+                    
+                Spacer()
+                    .frame(width: 16)
                 }
-            
-            }
+            }            
         }
-        //        .padding(.vertical, 24)
     }
 }
