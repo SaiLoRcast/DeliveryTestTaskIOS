@@ -15,6 +15,7 @@ struct OrdersList: View {
 
     init() {
         UINavigationBar.setAnimationsEnabled(false)
+        print("OrdersList call")
     }
 
     var body: some View {

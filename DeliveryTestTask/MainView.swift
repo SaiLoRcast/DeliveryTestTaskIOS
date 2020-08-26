@@ -18,9 +18,10 @@ struct MainView: View {
             VStack {
 
 //                if mainViewModel.stateView  == .success {
-                CurrentUserInfo(data: mainViewModel.currentUser, dataDeliveryTo: mainViewModel.deliveryToUserUser, withURL: mainViewModel.currentUser.picture)
+                CurrentUserInfo(data: mainViewModel.currentUser, dataDeliveryTo: mainViewModel.deliveryToUser, withURL: mainViewModel.currentUser.picture)
                 Spacer()
             }
+         
             .navigationBarHidden(true)
             .navigationBarTitle(Text(""))
         }

@@ -18,11 +18,11 @@ class MainViewModel: ObservableObject {
         }
     }
     
-    var deliveryToUserUser = UserInfo.emptyInit() {
-           willSet {
-               objectWillChange.send()
-           }
-       }
+    var deliveryToUser = UserInfo.emptyInit() {
+        willSet {
+            objectWillChange.send()
+        }
+    }
         
     private var stateCurrenUser = StateView.loading
     
@@ -34,22 +34,14 @@ class MainViewModel: ObservableObject {
         getDataDeliveryTo()
     }
     
-//    func retry() {
-//        stateView = .loading
-//        stateCurrenUser = .loading
-//        
-//        getData()
-//        getDataDeliveryTo()
-//    }
-    
     private func getData() {
-        
+        print("getData")
         client.getCurrentUserInfo(at: userId) { [weak self] currentUserInfo, error in
             guard let ws = self else { return }
             if let currentUserInfo = currentUserInfo {
                 ws.currentUser = currentUserInfo
                 ws.stateCurrenUser = .success
-                print("getData")
+                
             } else {
                 ws.stateCurrenUser = .failed
             }
@@ -58,13 +50,12 @@ class MainViewModel: ObservableObject {
     }
     
     private func getDataDeliveryTo() {
-         
-         client.getDeliveryToAddress(at: deliveryToAddress) { [weak self] deliveryToUserUser, error in
+         print("getDataDeliveryTo")
+         client.getDeliveryToAddress(at: deliveryToAddress) { [weak self] deliveryToUser, error in
                         guard let ws = self else { return }
-                        if let deliveryToUserUser = deliveryToUserUser {
-                            ws.deliveryToUserUser = deliveryToUserUser
+                        if let deliveryToUser = deliveryToUser {
+                            ws.deliveryToUser = deliveryToUser
                             ws.stateCurrenUser = .success
-                            print("getDataDeliveryTo")
                         } else {
                             ws.stateCurrenUser = .failed
                         }

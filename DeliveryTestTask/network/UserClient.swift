@@ -26,7 +26,7 @@ class UserClient {
         let url = baseUrl(userId)
         var request = URLRequest(url: url)
 //        request.setValue("lo2EC3eWZjn1kkHHS3CB", forHTTPHeaderField:"app-id")
-        request.setValue("5f462db3b78adc0002722332", forHTTPHeaderField:"app-id")
+        request.setValue("5f46a4613655b000025d026c", forHTTPHeaderField:"app-id")
 
                 
         let task = session.dataTask(with: request) { data, response, error in
@@ -66,12 +66,14 @@ class UserClient {
         getBaseRequest(at: userId) { (userInfo: UserInfo?, error) in
             completion(userInfo, error)
         }
+        print("getCurrentUserInfo")
     }
     
     func getDeliveryToAddress(at userId: String, completionHandler completion: @escaping CurrentUserInfoCompletionHandler) {
           getBaseRequest(at: userId) { (userInfo: UserInfo?, error) in
               completion(userInfo, error)
           }
+        print("getDeliveryToAddress")
       }
     
 }

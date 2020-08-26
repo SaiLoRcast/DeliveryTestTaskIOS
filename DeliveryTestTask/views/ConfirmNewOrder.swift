@@ -13,7 +13,7 @@ struct ConfirmNewOrder: View {
     
     @ObservedObject var mainViewModel = MainViewModel()
     @ObservedObject var ordersListViewModel = OrdersListViewModel()
-
+    
     let addressDeliveryFrom: String
     let dateDeliveryFrom: String
     let addressDeliveryTo: String
@@ -27,6 +27,7 @@ struct ConfirmNewOrder: View {
         self.dateDeliveryTo = dateDeliveryTo
         self.finalCost = finalCost
         UINavigationBar.setAnimationsEnabled(false)
+        print("ConfirmNewOrder call")
     }
     
     @State var selection: Int? = nil
@@ -34,90 +35,94 @@ struct ConfirmNewOrder: View {
     var body: some View {
         
         VStack() {
-                                        
-                VStack(alignment: .leading){
+            
+            VStack(alignment: .leading){
+                
+                Text("\(addressDeliveryFrom)")
+                    .font(.none)
+                    .fontWeight(.light)
+                    .padding(.top ,15)
+                    .padding(.leading ,21)
+                
+                HStack{
                     
-                    Text("\(addressDeliveryFrom)")
+                    Image("calendar")
+                        .padding(.leading ,21)
+                        .foregroundColor(Color("button"))
+                    
+                    Text(dateDeliveryFrom)
                         .font(.none)
                         .fontWeight(.light)
-                        .padding(.top ,15)
-                        .padding(.leading ,21)
-                    
-                    HStack{
-                        
-                        Image("calendar")
-                            .padding(.leading ,21)
-                            .foregroundColor(Color("button"))
-                        
-                        Text(dateDeliveryFrom)
-                            .font(.none)
-                            .fontWeight(.light)
-                            .fontWeight(.regular)
-                            .font(.system(size: 16))
-                            .foregroundColor(.black)
-                        
-                        
-                    }
-                    
-                    Image("arrow_down")
-                        .padding(.top, 13)
-                        .padding(.leading ,21)
-                        .padding(.bottom,10)
-                    
-                    Text(addressDeliveryTo)
-                        .font(.none)
-                        .fontWeight(.light)
-                        .padding(.leading ,21)
-                    
-                    HStack{
-                        
-                        Image("calendar")
-                            .padding(.leading, 21)
-                            .foregroundColor(Color("button"))
-                        
-                        Text(dateDeliveryTo)
-                            .font(.none)
-                            .fontWeight(.light)
-                            .fontWeight(.regular)
-                            .font(.system(size: 16))
-                            .foregroundColor(.black)
-                        
-                    }
-                    
-                    
+                        .fontWeight(.regular)
+                        .font(.system(size: 16))
+                        .foregroundColor(.black)
                     
                     
                 }
-            HStack(){
                 
-                Spacer()
+                Image("arrow_down")
+                    .padding(.top, 13)
+                    .padding(.leading ,21)
+                    .padding(.bottom,10)
                 
-                Text("\(finalCost) ₽")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding(.trailing, 16)
-                    .foregroundColor(Color("button"))
+                Text(addressDeliveryTo)
+                    .font(.none)
+                    .fontWeight(.light)
+                    .padding(.leading ,21)
+                
+                HStack{
+                    
+                    Image("calendar")
+                        .padding(.leading, 21)
+                        .foregroundColor(Color("button"))
+                    
+                    Text(dateDeliveryTo)
+                        .font(.none)
+                        .fontWeight(.light)
+                        .fontWeight(.regular)
+                        .font(.system(size: 16))
+                        .foregroundColor(.black)
+                    
+                }
+                
+                VStack(alignment: .trailing){
+                    
+                    HStack{
+                        
+                        Spacer()
+                        
+                        Text("\(finalCost) ₽")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .padding(.trailing, 16)
+                            .foregroundColor(Color("button"))
+                    }
+                }
+
+                
             }
+           
             Spacer()
             
             HStack(){
                 
                 Spacer()
-                    .frame(width: 32)
+                    .frame(width: 16)
                 
                 Button(action: {
                     print("")
                 }) {
-                    NavigationLink(destination: CurrentUserInfo(data: mainViewModel.currentUser, dataDeliveryTo: mainViewModel.deliveryToUserUser, withURL: mainViewModel.currentUser.picture)) {
+                    NavigationLink(destination: CurrentUserInfo(data: mainViewModel.currentUser, dataDeliveryTo: mainViewModel.deliveryToUser, withURL: mainViewModel.currentUser.picture)) {
                         Text("Отмена")
                             .fontWeight(.regular)
                             .font(.system(size: 17))
                             .padding(8)
-                            .frame(width: 208,height: 62)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 62)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(Color.gray, lineWidth: 1)
-                            )
+                        )
                             .foregroundColor(Color.black)
                     }
                 }
@@ -131,23 +136,27 @@ struct ConfirmNewOrder: View {
                         self.selection = 1
                         self.saveDataIntoDatabase()
                     }) {
-    //
+                        //
                         Text("Подтвердить")
                             .fontWeight(.regular)
                             .font(.system(size: 17))
                             .padding(8)
-                            .frame(width: 208,height: 62)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 62)
                             .background(Color("next_button_color"))
                             .foregroundColor(Color.white)
                             .cornerRadius(20)
-                        }
+                    }
                 }
                 
                 Spacer()
-                    .frame(width: 32)
+                    .frame(width: 16)
             }
+            Spacer()
+                .frame(height: 50)
         }
-        .navigationBarTitle(Text("Подтверждение заказа"), displayMode: .inline)
+
+            .navigationBarTitle(Text("Подтверждение заказа"), displayMode: .inline)
         
     }
     

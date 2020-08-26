@@ -22,10 +22,7 @@ struct CurrentUserInfo: View {
         self.data = data
         self.dataDeliveryTo = dataDeliveryTo
         imageLoader = ImageLoader(urlString:url)
-    }
-    
-    var userName: String {
-        return data.firstName
+        print("CurrentUserInfo call")
     }
         
     var body: some View {

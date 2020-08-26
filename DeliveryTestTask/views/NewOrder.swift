@@ -30,6 +30,8 @@ struct NewOrder: View {
         addressDeliveryTo = "\(dataDeliveryTo.location.country), \(dataDeliveryTo.location.state), \(dataDeliveryTo.location.city), \(dataDeliveryTo.location.street)"
         dateDeliveryFrom = "\(dateFormatTime(date: today))"
         dateDeliveryTo = "\(dateFormatTime(date: today.addingTimeInterval(100000)))"
+        
+         print("NewOrder call")
     }
     
     let items: [Weight] = [
@@ -43,6 +45,8 @@ struct NewOrder: View {
     @State var selectedBtn: Int = 1
     @State private var isExpressCost = false
     @State private var commentFrom = ""
+    @State var selection: Int? = nil
+
 
     func dateFormatTime(date : Date) -> String {
         let dateFormatter = DateFormatter()
@@ -407,11 +411,13 @@ struct NewOrder: View {
                     
                     
                     Spacer()
-                    
+                    NavigationLink(destination: ConfirmNewOrder(addressDeliveryFrom:addressDeliveryFrom,dateDeliveryFrom: dateDeliveryFrom,  addressDeliveryTo:addressDeliveryTo, dateDeliveryTo:dateDeliveryTo, finalCost: baseCost + additionalCost),tag: 1, selection: $selection) {
                     Button(action: {
                         print("")
+                        self.selection = 1
+
                     }) {
-                        NavigationLink(destination: ConfirmNewOrder(addressDeliveryFrom:addressDeliveryFrom,dateDeliveryFrom: dateDeliveryFrom,  addressDeliveryTo:addressDeliveryTo, dateDeliveryTo:dateDeliveryTo, finalCost: baseCost + additionalCost)) {
+                        
                             Text("Далее")
                                 .fontWeight(.regular)
                                 .font(.system(size: 17))
