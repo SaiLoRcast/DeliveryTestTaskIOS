@@ -1,0 +1,6 @@
+framework module Pods_DeliveryTestTask {
+  umbrella header "Pods-DeliveryTestTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_DeliveryTestTask_DeliveryTestTaskUITests {
+  umbrella header "Pods-DeliveryTestTask-DeliveryTestTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -22,7 +22,7 @@
 		11DABC4124EEA1F000DFBC7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DABC3F24EEA1F000DFBC7D /* LaunchScreen.storyboard */; };
 		11DABC4C24EEA1F000DFBC7D /* DeliveryTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DABC4B24EEA1F000DFBC7D /* DeliveryTestTaskTests.swift */; };
 		11DABC5724EEA1F000DFBC7D /* DeliveryTestTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DABC5624EEA1F000DFBC7D /* DeliveryTestTaskUITests.swift */; };
-		3522F0923527EDEB00AC90A6 /* Pods_DeliveryTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F84CEA23DD767FD5A37951F /* Pods_DeliveryTestTask.framework */; };
+		3A8FBBA995B6B9C355BE47F2 /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ECB26CF9D21172E057CAAF /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework */; };
 		84459F5E24F194990015EEE4 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459F5D24F194990015EEE4 /* ImageLoader.swift */; };
 		845092E524F1618A00453B14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845092E424F1618A00453B14 /* Constants.swift */; };
 		8451D7D424F668A100766FDA /* ConfirmNewOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451D7D324F668A100766FDA /* ConfirmNewOrder.swift */; };
@@ -33,8 +33,8 @@
 		845EC9FD24F466C40071F865 /* OrdersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC9FC24F466C40071F865 /* OrdersListViewModel.swift */; };
 		845ECA0024F468240071F865 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 845EC9FF24F468240071F865 /* SwiftPackageProductDependency */; };
 		845ECA0224F468A90071F865 /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ECA0124F468A90071F865 /* UserOrder.swift */; };
-		BE86FB2C00BB9AE58CD69AF8 /* Pods_DeliveryTestTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B9EDCE484DBACC874365E8 /* Pods_DeliveryTestTaskTests.framework */; };
-		CAB90F4377C3023CAB4D90FB /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4383CD284C3DA41DEDC7EB72 /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework */; };
+		BB54E1CAC07E151560AD6183 /* Pods_DeliveryTestTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E55C52D06DE7DA399B20E2 /* Pods_DeliveryTestTaskTests.framework */; };
+		FEE206142EF64875D280DC4E /* Pods_DeliveryTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A545DAB3B79C6F12CF6592 /* Pods_DeliveryTestTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B9EDCE484DBACC874365E8 /* Pods_DeliveryTestTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliveryTestTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F094E582FEE3507CCBAE6B3 /* Pods-DeliveryTestTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTaskTests/Pods-DeliveryTestTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1163C83B24EFC1C0009E2C95 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		1163C83D24EFC39E009E2C95 /* UserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
 		1163C84924EFC803009E2C95 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -78,10 +76,9 @@
 		11DABC5224EEA1F000DFBC7D /* DeliveryTestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveryTestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11DABC5624EEA1F000DFBC7D /* DeliveryTestTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTestTaskUITests.swift; sourceTree = "<group>"; };
 		11DABC5824EEA1F000DFBC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F84CEA23DD767FD5A37951F /* Pods_DeliveryTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliveryTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4383CD284C3DA41DEDC7EB72 /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B1E0FFBDE00782529534040 /* Pods-DeliveryTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask.release.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask.release.xcconfig"; sourceTree = "<group>"; };
-		6FB436A1AB6AE868C52153CE /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2BFE48F4033E5A12A1E99232 /* Pods-DeliveryTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask.debug.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		4686949DE229CDBE783412EE /* Pods-DeliveryTestTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTaskTests/Pods-DeliveryTestTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5482BB39050A3E089057B4E6 /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		84459F5D24F194990015EEE4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		845092E424F1618A00453B14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8451D7D324F668A100766FDA /* ConfirmNewOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNewOrder.swift; sourceTree = "<group>"; };
@@ -91,9 +88,12 @@
 		845EC9FA24F44D700071F865 /* OrdersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersList.swift; sourceTree = "<group>"; };
 		845EC9FC24F466C40071F865 /* OrdersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewModel.swift; sourceTree = "<group>"; };
 		845ECA0124F468A90071F865 /* UserOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrder.swift; sourceTree = "<group>"; };
-		87B872413EEF147A10BDA58E /* Pods-DeliveryTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask.debug.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask.debug.xcconfig"; sourceTree = "<group>"; };
-		97B304ABCD3DC72981A4A337 /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E36B728BE27D8BFDCD083013 /* Pods-DeliveryTestTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTaskTests.release.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTaskTests/Pods-DeliveryTestTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0E55C52D06DE7DA399B20E2 /* Pods_DeliveryTestTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliveryTestTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A587FD8B9D9FCF55AE9E940D /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA5FCEC2D3C91CDA96E5C1D9 /* Pods-DeliveryTestTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTaskTests.release.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTaskTests/Pods-DeliveryTestTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		C4A545DAB3B79C6F12CF6592 /* Pods_DeliveryTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliveryTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1ECB26CF9D21172E057CAAF /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7E45F2B06C59D187622EF2 /* Pods-DeliveryTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeliveryTestTask.release.xcconfig"; path = "Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				845ECA0024F468240071F865 /* BuildFile in Frameworks */,
-				3522F0923527EDEB00AC90A6 /* Pods_DeliveryTestTask.framework in Frameworks */,
+				FEE206142EF64875D280DC4E /* Pods_DeliveryTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE86FB2C00BB9AE58CD69AF8 /* Pods_DeliveryTestTaskTests.framework in Frameworks */,
+				BB54E1CAC07E151560AD6183 /* Pods_DeliveryTestTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,13 +118,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB90F4377C3023CAB4D90FB /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework in Frameworks */,
+				3A8FBBA995B6B9C355BE47F2 /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100F5D0D6B67527531E93A4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BFE48F4033E5A12A1E99232 /* Pods-DeliveryTestTask.debug.xcconfig */,
+				EB7E45F2B06C59D187622EF2 /* Pods-DeliveryTestTask.release.xcconfig */,
+				A587FD8B9D9FCF55AE9E940D /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig */,
+				5482BB39050A3E089057B4E6 /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig */,
+				4686949DE229CDBE783412EE /* Pods-DeliveryTestTaskTests.debug.xcconfig */,
+				BA5FCEC2D3C91CDA96E5C1D9 /* Pods-DeliveryTestTaskTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1163C83824EFBC42009E2C95 /* screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +207,8 @@
 				11DABC4A24EEA1F000DFBC7D /* DeliveryTestTaskTests */,
 				11DABC5524EEA1F000DFBC7D /* DeliveryTestTaskUITests */,
 				11DABC3224EEA1EE00DFBC7D /* Products */,
-				657D424BE585C16B65420B76 /* Pods */,
-				E68CD01F153037B03836A63E /* Frameworks */,
+				100F5D0D6B67527531E93A4E /* Pods */,
+				82E77C59F13DF49D5CA5BBD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,25 +265,12 @@
 			path = DeliveryTestTaskUITests;
 			sourceTree = "<group>";
 		};
-		657D424BE585C16B65420B76 /* Pods */ = {
+		82E77C59F13DF49D5CA5BBD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				87B872413EEF147A10BDA58E /* Pods-DeliveryTestTask.debug.xcconfig */,
-				6B1E0FFBDE00782529534040 /* Pods-DeliveryTestTask.release.xcconfig */,
-				6FB436A1AB6AE868C52153CE /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig */,
-				97B304ABCD3DC72981A4A337 /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig */,
-				0F094E582FEE3507CCBAE6B3 /* Pods-DeliveryTestTaskTests.debug.xcconfig */,
-				E36B728BE27D8BFDCD083013 /* Pods-DeliveryTestTaskTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		E68CD01F153037B03836A63E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2F84CEA23DD767FD5A37951F /* Pods_DeliveryTestTask.framework */,
-				4383CD284C3DA41DEDC7EB72 /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework */,
-				00B9EDCE484DBACC874365E8 /* Pods_DeliveryTestTaskTests.framework */,
+				C4A545DAB3B79C6F12CF6592 /* Pods_DeliveryTestTask.framework */,
+				E1ECB26CF9D21172E057CAAF /* Pods_DeliveryTestTask_DeliveryTestTaskUITests.framework */,
+				A0E55C52D06DE7DA399B20E2 /* Pods_DeliveryTestTaskTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,7 +286,6 @@
 				11DABC2D24EEA1EE00DFBC7D /* Sources */,
 				11DABC2E24EEA1EE00DFBC7D /* Frameworks */,
 				11DABC2F24EEA1EE00DFBC7D /* Resources */,
-				2B4E5CEA0911ED5631D0C520 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,7 +326,6 @@
 				11DABC4E24EEA1F000DFBC7D /* Sources */,
 				11DABC4F24EEA1F000DFBC7D /* Frameworks */,
 				11DABC5024EEA1F000DFBC7D /* Resources */,
-				DFDDFBB3EF95FC54FF3B0306 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,23 +411,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B4E5CEA0911ED5631D0C520 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4A066F39CA29D9B87A1696DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,23 +475,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFDDFBB3EF95FC54FF3B0306 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -700,7 +665,7 @@
 		};
 		11DABC5C24EEA1F000DFBC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87B872413EEF147A10BDA58E /* Pods-DeliveryTestTask.debug.xcconfig */;
+			baseConfigurationReference = 2BFE48F4033E5A12A1E99232 /* Pods-DeliveryTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -720,7 +685,7 @@
 		};
 		11DABC5D24EEA1F000DFBC7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B1E0FFBDE00782529534040 /* Pods-DeliveryTestTask.release.xcconfig */;
+			baseConfigurationReference = EB7E45F2B06C59D187622EF2 /* Pods-DeliveryTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -740,7 +705,7 @@
 		};
 		11DABC5F24EEA1F000DFBC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F094E582FEE3507CCBAE6B3 /* Pods-DeliveryTestTaskTests.debug.xcconfig */;
+			baseConfigurationReference = 4686949DE229CDBE783412EE /* Pods-DeliveryTestTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -762,7 +727,7 @@
 		};
 		11DABC6024EEA1F000DFBC7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E36B728BE27D8BFDCD083013 /* Pods-DeliveryTestTaskTests.release.xcconfig */;
+			baseConfigurationReference = BA5FCEC2D3C91CDA96E5C1D9 /* Pods-DeliveryTestTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -784,7 +749,7 @@
 		};
 		11DABC6224EEA1F000DFBC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FB436A1AB6AE868C52153CE /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig */;
+			baseConfigurationReference = A587FD8B9D9FCF55AE9E940D /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -804,7 +769,7 @@
 		};
 		11DABC6324EEA1F000DFBC7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97B304ABCD3DC72981A4A337 /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig */;
+			baseConfigurationReference = 5482BB39050A3E089057B4E6 /* Pods-DeliveryTestTask-DeliveryTestTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
