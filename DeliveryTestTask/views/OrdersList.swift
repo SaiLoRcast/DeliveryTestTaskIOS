@@ -13,18 +13,88 @@ struct OrdersList: View {
     
     @ObservedObject var ordersListViewModel = OrdersListViewModel()
 
-    init(){
+    init() {
         UINavigationBar.setAnimationsEnabled(false)
     }
-    
+
     var body: some View {
-        VStack {
-            Text("asd")
-
+        
+         List {
+            ForEach(ordersListViewModel.getOrdersList()) {
+                ResultRow($0)
+            }
         }
-
+       
         .navigationBarTitle(Text("Мои заказы"), displayMode: .inline)
 
     }
     
+    struct ResultRow: View {
+        
+        let data: Order
+        
+        init(_ data: Order) {
+            self.data = data
+        }
+        
+        var body: some View {
+            VStack(alignment: HorizontalAlignment.leading){
+                
+                VStack(alignment: HorizontalAlignment.leading){
+                    Text(data.addressDeliveryFrom)
+                    
+                    HStack{
+                        
+                        Image("calendar")
+                            .padding(12)
+                            .foregroundColor(Color("button"))
+                        
+                        Text(data.dateDeliveryFrom)
+                            .fontWeight(.regular)
+                            .font(.system(size: 16))
+                            .foregroundColor(.black)
+                        
+                        Spacer()
+                        
+                    }
+                    
+                }
+                
+                Image("arrow_down")
+                
+                VStack{
+                    Text(data.addressDeliveryTo)
+                    
+                    HStack{
+                        
+                        Image("calendar")
+                            .padding(12)
+                            .foregroundColor(Color("button"))
+                        
+                        Text(data.dateDeliveryTo)
+                            .fontWeight(.regular)
+                            .font(.system(size: 16))
+                            .foregroundColor(.black)
+                        
+                        Spacer()
+                        
+                    }
+                    .padding(16)
+                    
+                }
+                
+                HStack(){
+                    
+                    Spacer()
+                    
+                    Text("\(data.cost) ₽")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding(.trailing, 16)
+                        .foregroundColor(Color("button"))
+                }
+                .padding(16)
+            }
+        }
+    }
 }

@@ -44,11 +44,9 @@ class UserClient {
                         do {
                             let userInfo = try self.decoder.decode(T.self, from: data)
                             
-                            print(response as Any)
                             completion(userInfo, nil)
                         } catch let error {
                             print(error)
-                            print(data)
 
                             completion(nil, error)
                         }

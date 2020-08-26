@@ -12,9 +12,6 @@ import SwiftUI
 struct NewOrder: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-//    @ObservedObject var newOrderViewModel = NewOrderViewModel()
-//    @ObservedObject var mainViewModel = MainViewModel()
     
     let data: UserInfo
     let dataDeliveryTo: UserInfo

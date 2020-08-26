@@ -14,7 +14,6 @@ struct ConfirmNewOrder: View {
     @ObservedObject var mainViewModel = MainViewModel()
     @ObservedObject var ordersListViewModel = OrdersListViewModel()
 
-    
     let addressDeliveryFrom: String
     let dateDeliveryFrom: String
     let addressDeliveryTo: String
@@ -30,14 +29,12 @@ struct ConfirmNewOrder: View {
         UINavigationBar.setAnimationsEnabled(false)
     }
     
+    @State var selection: Int? = nil
     
     var body: some View {
         
         VStack(alignment: .leading) {
-            
-            Spacer()
-                .frame(height: 16)
-            
+                        
             VStack{
                 Text(addressDeliveryFrom)
                 
@@ -55,7 +52,6 @@ struct ConfirmNewOrder: View {
                     Spacer()
                     
                 }
-                .padding(16)
                 
             }
             
@@ -121,10 +117,13 @@ struct ConfirmNewOrder: View {
                 Spacer()
                     .frame(width: 16)
                 
-                Button(action: {
-                    print("")
-                }) {
-                    NavigationLink(destination: OrdersList()) {
+                NavigationLink(destination: OrdersList(),tag: 1, selection: $selection) {
+                    Button(action: {
+                        print("Save!")
+                        self.selection = 1
+                        self.saveDataIntoDatabase()
+                    }) {
+    //
                         Text("Подтвердить")
                             .fontWeight(.regular)
                             .font(.system(size: 17))
@@ -133,7 +132,7 @@ struct ConfirmNewOrder: View {
                             .background(Color("next_button_color"))
                             .foregroundColor(Color.white)
                             .cornerRadius(20)
-                    }
+                        }
                 }
                 
                 Spacer()
@@ -142,6 +141,13 @@ struct ConfirmNewOrder: View {
         }
         .navigationBarTitle(Text("Подтверждение заказа"), displayMode: .inline)
         
+    }
+    
+    func saveDataIntoDatabase() {
+        ordersListViewModel.submit(addressDeliveryFrom, dateDeliveryFrom, addressDeliveryTo, dateDeliveryFrom, finalCost, completionHandler: { (error) in
+            print(error)
+            
+        })
     }
     
 }

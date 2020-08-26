@@ -26,12 +26,13 @@
 		84459F5E24F194990015EEE4 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459F5D24F194990015EEE4 /* ImageLoader.swift */; };
 		845092E524F1618A00453B14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845092E424F1618A00453B14 /* Constants.swift */; };
 		8451D7D424F668A100766FDA /* ConfirmNewOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451D7D324F668A100766FDA /* ConfirmNewOrder.swift */; };
+		8451D7D824F68A4000766FDA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451D7D724F68A4000766FDA /* Order.swift */; };
 		845E4AF924F58A0600D47581 /* NewOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E4AF824F58A0600D47581 /* NewOrder.swift */; };
 		845E4AFB24F59F2E00D47581 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E4AFA24F59F2E00D47581 /* Weight.swift */; };
 		845E4AFD24F5AD6A00D47581 /* NewOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E4AFC24F5AD6A00D47581 /* NewOrderViewModel.swift */; };
 		845EC9FB24F44D700071F865 /* OrdersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC9FA24F44D700071F865 /* OrdersList.swift */; };
 		845EC9FD24F466C40071F865 /* OrdersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC9FC24F466C40071F865 /* OrdersListViewModel.swift */; };
-		845ECA0024F468240071F865 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 845EC9FF24F468240071F865 /* SwiftPackageProductDependency */; };
+		845ECA0024F468240071F865 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 845EC9FF24F468240071F865 /* URLImage */; };
 		845ECA0224F468A90071F865 /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845ECA0124F468A90071F865 /* UserOrder.swift */; };
 		BB54E1CAC07E151560AD6183 /* Pods_DeliveryTestTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E55C52D06DE7DA399B20E2 /* Pods_DeliveryTestTaskTests.framework */; };
 		FEE206142EF64875D280DC4E /* Pods_DeliveryTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A545DAB3B79C6F12CF6592 /* Pods_DeliveryTestTask.framework */; };
@@ -82,6 +83,7 @@
 		84459F5D24F194990015EEE4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		845092E424F1618A00453B14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8451D7D324F668A100766FDA /* ConfirmNewOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNewOrder.swift; sourceTree = "<group>"; };
+		8451D7D724F68A4000766FDA /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		845E4AF824F58A0600D47581 /* NewOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrder.swift; sourceTree = "<group>"; };
 		845E4AFA24F59F2E00D47581 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		845E4AFC24F5AD6A00D47581 /* NewOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewModel.swift; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845ECA0024F468240071F865 /* BuildFile in Frameworks */,
+				845ECA0024F468240071F865 /* URLImage in Frameworks */,
 				FEE206142EF64875D280DC4E /* Pods_DeliveryTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +137,6 @@
 				4686949DE229CDBE783412EE /* Pods-DeliveryTestTaskTests.debug.xcconfig */,
 				BA5FCEC2D3C91CDA96E5C1D9 /* Pods-DeliveryTestTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -185,6 +186,7 @@
 				1163C84B24EFDCED009E2C95 /* Location.swift */,
 				845ECA0124F468A90071F865 /* UserOrder.swift */,
 				845E4AFA24F59F2E00D47581 /* Weight.swift */,
+				8451D7D724F68A4000766FDA /* Order.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -286,6 +288,7 @@
 				11DABC2D24EEA1EE00DFBC7D /* Sources */,
 				11DABC2E24EEA1EE00DFBC7D /* Frameworks */,
 				11DABC2F24EEA1EE00DFBC7D /* Resources */,
+				200FA1637F53501463384E11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,7 +296,7 @@
 			);
 			name = DeliveryTestTask;
 			packageProductDependencies = (
-				845EC9FF24F468240071F865 /* SwiftPackageProductDependency */,
+				845EC9FF24F468240071F865 /* URLImage */,
 			);
 			productName = DeliveryTestTask;
 			productReference = 11DABC3124EEA1EE00DFBC7D /* DeliveryTestTask.app */;
@@ -326,6 +329,7 @@
 				11DABC4E24EEA1F000DFBC7D /* Sources */,
 				11DABC4F24EEA1F000DFBC7D /* Frameworks */,
 				11DABC5024EEA1F000DFBC7D /* Resources */,
+				892C4A2556445F9C5D2B226F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,7 +374,7 @@
 			);
 			mainGroup = 11DABC2824EEA1ED00DFBC7D;
 			packageReferences = (
-				845EC9FE24F468240071F865 /* RemoteSwiftPackageReference */,
+				845EC9FE24F468240071F865 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = 11DABC3224EEA1EE00DFBC7D /* Products */;
 			projectDirPath = "";
@@ -411,6 +415,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		200FA1637F53501463384E11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask/Pods-DeliveryTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4A066F39CA29D9B87A1696DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,6 +452,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		892C4A2556445F9C5D2B226F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeliveryTestTask-DeliveryTestTaskUITests/Pods-DeliveryTestTask-DeliveryTestTaskUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9804C1673F4C209BC58F64AB /* [CP] Check Pods Manifest.lock */ = {
@@ -486,6 +524,7 @@
 			files = (
 				1163C83C24EFC1C0009E2C95 /* MainViewModel.swift in Sources */,
 				845092E524F1618A00453B14 /* Constants.swift in Sources */,
+				8451D7D824F68A4000766FDA /* Order.swift in Sources */,
 				845E4AFB24F59F2E00D47581 /* Weight.swift in Sources */,
 				84459F5E24F194990015EEE4 /* ImageLoader.swift in Sources */,
 				1163C85324F00D1C009E2C95 /* CurrentUserInfoView.swift in Sources */,
@@ -829,7 +868,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		845EC9FE24F468240071F865 /* RemoteSwiftPackageReference */ = {
+		845EC9FE24F468240071F865 /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
 			requirement = {
@@ -840,9 +879,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		845EC9FF24F468240071F865 /* SwiftPackageProductDependency */ = {
+		845EC9FF24F468240071F865 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 845EC9FE24F468240071F865 /* RemoteSwiftPackageReference */;
+			package = 845EC9FE24F468240071F865 /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */

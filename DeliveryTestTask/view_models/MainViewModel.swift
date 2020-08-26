@@ -34,13 +34,13 @@ class MainViewModel: ObservableObject {
         getDataDeliveryTo()
     }
     
-    func retry() {
-        stateView = .loading
-        stateCurrenUser = .loading
-        
-        getData()
-        getDataDeliveryTo()
-    }
+//    func retry() {
+//        stateView = .loading
+//        stateCurrenUser = .loading
+//        
+//        getData()
+//        getDataDeliveryTo()
+//    }
     
     private func getData() {
         
@@ -64,7 +64,7 @@ class MainViewModel: ObservableObject {
                         if let deliveryToUserUser = deliveryToUserUser {
                             ws.deliveryToUserUser = deliveryToUserUser
                             ws.stateCurrenUser = .success
-                            print("getData")
+                            print("getDataDeliveryTo")
                         } else {
                             ws.stateCurrenUser = .failed
                         }

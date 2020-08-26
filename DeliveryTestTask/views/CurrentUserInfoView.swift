@@ -15,7 +15,6 @@ struct CurrentUserInfo: View {
     let data: UserInfo
     let dataDeliveryTo: UserInfo
 
-    
     @ObservedObject var imageLoader:ImageLoader
     @State var image:UIImage = UIImage()
     

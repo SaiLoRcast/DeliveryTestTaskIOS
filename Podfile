@@ -6,6 +6,7 @@ target 'DeliveryTestTask' do
   use_frameworks!
 
   # Pods for DeliveryTestTask
+  pod 'RealmSwift'
 
   target 'DeliveryTestTaskTests' do
     inherit! :search_paths
