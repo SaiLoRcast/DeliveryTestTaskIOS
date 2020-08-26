@@ -18,27 +18,28 @@ class MainViewModel: ObservableObject {
         }
     }
     
-    var currentDescription = "" {
-        willSet {
-            objectWillChange.send()
-        }
-    }
-    
+    var deliveryToUserUser = UserInfo.emptyInit() {
+           willSet {
+               objectWillChange.send()
+           }
+       }
+        
     private var stateCurrenUser = StateView.loading
-    private var stateForecastWeather = StateView.loading
     
     private let userId = "0F8JIqi4zwvb77FGz6Wt"
-    
+    private let deliveryToAddress = "1Lkk06cOUCkiAsUXFLMN"
+
     init() {
         getData()
+        getDataDeliveryTo()
     }
     
     func retry() {
         stateView = .loading
         stateCurrenUser = .loading
-        stateForecastWeather = .loading
         
         getData()
+        getDataDeliveryTo()
     }
     
     private func getData() {
@@ -52,18 +53,23 @@ class MainViewModel: ObservableObject {
             } else {
                 ws.stateCurrenUser = .failed
             }
-            ws.updateStateView()
         }
         
     }
     
-    private func updateStateView() {
-        if stateCurrenUser == .success, stateForecastWeather == .success {
-            stateView = .success
-        }
-        
-        if stateCurrenUser == .failed, stateForecastWeather == .failed {
-            stateView = .failed
-        }
-    }
+    private func getDataDeliveryTo() {
+         
+         client.getDeliveryToAddress(at: deliveryToAddress) { [weak self] deliveryToUserUser, error in
+                        guard let ws = self else { return }
+                        if let deliveryToUserUser = deliveryToUserUser {
+                            ws.deliveryToUserUser = deliveryToUserUser
+                            ws.stateCurrenUser = .success
+                            print("getData")
+                        } else {
+                            ws.stateCurrenUser = .failed
+                        }
+                    }
+         
+     }
+    
 }

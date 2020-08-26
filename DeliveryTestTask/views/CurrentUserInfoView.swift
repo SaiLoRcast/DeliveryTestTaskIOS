@@ -13,12 +13,15 @@ import SwiftUI
 struct CurrentUserInfo: View {
     
     let data: UserInfo
+    let dataDeliveryTo: UserInfo
+
     
     @ObservedObject var imageLoader:ImageLoader
     @State var image:UIImage = UIImage()
     
-    init(data:UserInfo, withURL url:String) {
+    init(data:UserInfo, dataDeliveryTo: UserInfo, withURL url:String) {
         self.data = data
+        self.dataDeliveryTo = dataDeliveryTo
         imageLoader = ImageLoader(urlString:url)
     }
     
@@ -109,7 +112,7 @@ struct CurrentUserInfo: View {
                 Button(action: {
                     print("!")
                 }) {
-                    NavigationLink(destination: NewOrder()) {
+                    NavigationLink(destination: NewOrder(data:data, dataDeliveryTo:dataDeliveryTo)) {
                         Text("Создать заказ")
                             .fontWeight(.medium)
                             .font(.none)

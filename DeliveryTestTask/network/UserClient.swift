@@ -25,7 +25,9 @@ class UserClient {
         
         let url = baseUrl(userId)
         var request = URLRequest(url: url)
-        request.setValue("lo2EC3eWZjn1kkHHS3CB", forHTTPHeaderField:"app-id")
+//        request.setValue("lo2EC3eWZjn1kkHHS3CB", forHTTPHeaderField:"app-id")
+        request.setValue("5f462db3b78adc0002722332", forHTTPHeaderField:"app-id")
+
                 
         let task = session.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
@@ -67,5 +69,11 @@ class UserClient {
             completion(userInfo, error)
         }
     }
+    
+    func getDeliveryToAddress(at userId: String, completionHandler completion: @escaping CurrentUserInfoCompletionHandler) {
+          getBaseRequest(at: userId) { (userInfo: UserInfo?, error) in
+              completion(userInfo, error)
+          }
+      }
     
 }
