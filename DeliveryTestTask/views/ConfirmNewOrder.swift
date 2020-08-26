@@ -33,51 +33,61 @@ struct ConfirmNewOrder: View {
     
     var body: some View {
         
-        VStack(alignment: .leading) {
+        VStack() {
+                                        
+                VStack(alignment: .leading){
+                    
+                    Text("\(addressDeliveryFrom)")
+                        .font(.none)
+                        .fontWeight(.light)
+                        .padding(.top ,15)
+                        .padding(.leading ,21)
+                    
+                    HStack{
                         
-            VStack{
-                Text(addressDeliveryFrom)
-                
-                HStack{
+                        Image("calendar")
+                            .padding(.leading ,21)
+                            .foregroundColor(Color("button"))
+                        
+                        Text(dateDeliveryFrom)
+                            .font(.none)
+                            .fontWeight(.light)
+                            .fontWeight(.regular)
+                            .font(.system(size: 16))
+                            .foregroundColor(.black)
+                        
+                        
+                    }
                     
-                    Image("calendar")
-                        .padding(12)
-                        .foregroundColor(Color("button"))
+                    Image("arrow_down")
+                        .padding(.top, 13)
+                        .padding(.leading ,21)
+                        .padding(.bottom,10)
                     
-                    Text(dateDeliveryFrom)
-                        .fontWeight(.regular)
-                        .font(.system(size: 16))
-                        .foregroundColor(.black)
+                    Text(addressDeliveryTo)
+                        .font(.none)
+                        .fontWeight(.light)
+                        .padding(.leading ,21)
                     
-                    Spacer()
+                    HStack{
+                        
+                        Image("calendar")
+                            .padding(.leading, 21)
+                            .foregroundColor(Color("button"))
+                        
+                        Text(dateDeliveryTo)
+                            .font(.none)
+                            .fontWeight(.light)
+                            .fontWeight(.regular)
+                            .font(.system(size: 16))
+                            .foregroundColor(.black)
+                        
+                    }
+                    
+                    
+                    
                     
                 }
-                
-            }
-            
-            Image("arrow_down")
-            
-            VStack{
-                Text(addressDeliveryTo)
-                
-                HStack{
-                    
-                    Image("calendar")
-                        .padding(12)
-                        .foregroundColor(Color("button"))
-                    
-                    Text(dateDeliveryTo)
-                        .fontWeight(.regular)
-                        .font(.system(size: 16))
-                        .foregroundColor(.black)
-                    
-                    Spacer()
-                    
-                }
-                .padding(16)
-                
-            }
-            
             HStack(){
                 
                 Spacer()
@@ -88,8 +98,6 @@ struct ConfirmNewOrder: View {
                     .padding(.trailing, 16)
                     .foregroundColor(Color("button"))
             }
-            .padding(16)
-            
             Spacer()
             
             HStack(){
@@ -108,7 +116,7 @@ struct ConfirmNewOrder: View {
                             .frame(width: 208,height: 62)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.gray, lineWidth: 5)
+                                    .stroke(Color.gray, lineWidth: 1)
                             )
                             .foregroundColor(Color.black)
                     }

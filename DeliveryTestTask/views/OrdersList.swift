@@ -24,8 +24,8 @@ struct OrdersList: View {
                 ResultRow($0)
             }
         }
-       
-        .navigationBarTitle(Text("Мои заказы"), displayMode: .inline)
+         .background(Color("background"))
+         .navigationBarTitle(Text("Мои заказы"), displayMode: .inline)
 
     }
     
@@ -42,11 +42,13 @@ struct OrdersList: View {
                 
                 VStack(alignment: HorizontalAlignment.leading){
                     Text(data.addressDeliveryFrom)
+                        .padding(.top ,15)
+                        .padding(.leading ,21)
                     
                     HStack{
                         
                         Image("calendar")
-                            .padding(12)
+                            .padding(.leading ,21)
                             .foregroundColor(Color("button"))
                         
                         Text(data.dateDeliveryFrom)
@@ -61,14 +63,18 @@ struct OrdersList: View {
                 }
                 
                 Image("arrow_down")
+                    .padding(.top, 13)
+                    .padding(.leading ,21)
+                    .padding(.bottom,10)
                 
                 VStack{
                     Text(data.addressDeliveryTo)
-                    
+                        .padding(.leading ,21)
+
                     HStack{
                         
                         Image("calendar")
-                            .padding(12)
+                            .padding(.leading, 21)
                             .foregroundColor(Color("button"))
                         
                         Text(data.dateDeliveryTo)
@@ -79,7 +85,6 @@ struct OrdersList: View {
                         Spacer()
                         
                     }
-                    .padding(16)
                     
                 }
                 
@@ -93,8 +98,11 @@ struct OrdersList: View {
                         .padding(.trailing, 16)
                         .foregroundColor(Color("button"))
                 }
-                .padding(16)
+                
+                Spacer()
+                    .frame(height: 16)
             }
+            .background(Color.white)
         }
     }
 }
